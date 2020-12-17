@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+void kk  (int a[100],int n){
+    int l,i=0,j=0,max;
+    cout<<"enter your number"<<endl;
+    cin>>a[n];
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(a[i]<a[j]){
+                max=a[i];
+                a[i]=a[j];
+                a[j]=max;
+                }
+            }
+        }
+    }
+void del(int a[100],int n){
+    int j,d[100],t=0;
+    cout<<"enter the number to delete"<<endl;
+    cin>>j;
+    for(int i=0;i<n;i++){
+        if(j==a[i]){
+            continue;
+            }
+        a[t]=a[i];
+        t++;
+        }
+    }
+    void print (int a[100],int n){
+        for(int i=0;i<n;i++){
+            cout<<" - "<<a[i]<<" - ";
+            
+            }
+        cout<<endl<<endl<<endl;
+        }
+
+int main()
+
+{
+    int n=0,a[100];
+    for(int i=44;i>0;){
+    cout<<"enter 1 to add elemant to array \n enter 2 to delete a number from array "
+    <<"enter 3 to print the array \n enter 4 for esc"<<endl;
+    int ch;
+    cin>>ch;
+    switch (ch) {
+        case 1 :
+        kk(a,n);
+        n++;
+        break;
+        case 2:
+        del(a,n);
+        n--;
+        break;
+        case 3:
+        print(a,n);
+        break;
+        case 4:
+        return 0;
+        break;
+        default:
+        cout<<"wrong choise please enter from 1 to 4"<<endl;
+        break;
+        }
+    }
+	return 0;
+}
+ /*int n;
+    cout<<"enter how much you want to enter"<<endl;
+    cin>>n;
+int a[n],b[n],max;
+cout<<"enter your numbers to array"<<endl;
+for(int i=0;i<n;i++){
+    cout<<"enter your ["<<i+1<<"] number "<<endl;
+    cin>>a[i];
+    }
+    for(int i=0;i<n-1;i++){
+        b[i]=a[i]*a[i+1];
+        
+        }
+        for(int i=0;i<n;i++){
+       for(int j=0;j<n;j++){
+           if(a[i]>a[j]){
+               max=a[i];
+               a[i]=a[j];
+               a[j]=max;
+               }
+           
+           }
+        
+        }
+        cout<<endl;
+        for(int i=0;i<n;i++){
+            cout<<" "<< a[i];
+            }*/

@@ -1,0 +1,21 @@
+#include <cstdlib>
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+int main(){
+char username[50];
+char password[50];
+cout<<"enter your user name";
+cin.get(username,50);
+cout<<"enter your password";
+cin>>password;
+
+int u=strcmp("charbel",username);
+int p=strcmp("123456",password);
+if((u==0)&&(p==0)){cout<<"your password is correct";}
+else cout<<"your password or username is not correct";
+
+cout<<endl;
+    return 0;
+}

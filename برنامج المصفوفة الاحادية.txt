@@ -1,0 +1,54 @@
+#include <cstdlib>
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+int main(){
+    int n,f=0;
+    cout<<"enter how much numbers to enter"<<endl;
+    cin>>n;
+   int a[n],sum=0,max=0,min,b,c,l[n],j=0;
+   float avg;
+   for(int i=0;i<n;i++){
+       cin>>a[i];
+       sum +=a[i];
+       avg=(float)sum/2;
+       if(max<a[i]){max=a[i];}
+       if(min>a[i]){min=a[i];}
+       }
+       cout<<"the number you enter:"<<"\t";
+       for(int i=0;i<n;i++){
+           cout<<"\t"<<a[i];
+           }
+           cout<<"the sum is :"<<sum<<"the avg is :"<<avg<<"the max number"<<max<<"min number"<<min;
+        cout<<"enter your number to check"<<endl;
+        cin>>b;
+        for(int i=0;i<n;i++){
+            if(b==a[i]){cout<<"your number is in"<<endl;
+            f=1;
+            break;
+              }
+            }
+            if(f==0){cout<<"the number is not in"<<endl;}
+            cout<<"enter your number to delete"<<endl;
+            cin>>c;
+            for(int i=0;i<n;i++){
+                if(c==a[i]){j=i;
+                    continue;}
+                l[j]=a[i];
+                j++;
+                }
+                for(int i=0;i<n-1;i++){
+                    cout<<"the new array is"<<l[i]<<endl;
+                    }
+                    cout<<"enter your new number to the array";<<endl;
+                    cin>>l[n-1];
+                    
+            
+    return 0;
+    
+    
+}

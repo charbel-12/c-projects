@@ -1,0 +1,125 @@
+/*#include <cstdlib>
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+int main(){
+    int n,f=0;
+    cout<<"enter how much numbers to enter"<<endl;
+    cin>>n;
+   int a[n],sum=0,max=0,min,b,c,l[n],j=0,p=0,k[n],d=0;
+   float avg;
+   for(int i=0;i<n;i++){
+       cin>>a[i];
+       sum +=a[i];
+       avg=(float)sum/2;
+       if(max<a[i]){max=a[i];}
+       if(min>a[i]){min=a[i];}
+       }
+       cout<<"the number you enter:"<<"\t";
+       for(int i=0;i<n;i++){
+           cout<<"\t"<<a[i];
+           }
+           cout<<"the sum is :"<<sum<<endl<<"the avg is :"<<avg<<endl<<"the max number"<<max<<endl<<"min number"<<min<<endl;
+        cout<<"the revers is"<<endl;
+        for(int i=n-1;0<=i;i--){
+            k[p]=a[i];
+            cout<<k[p]<<"  ";
+            p++;
+            }
+        
+        cout<<"enter your number to check"<<endl;
+        cin>>b;
+        for(int i=0;i<n;i++){
+            if(b==a[i]){cout<<"your number is in "<<endl;
+            f=1;
+            break;
+              }
+            }
+            if(f==0){cout<<"the number is not in  "<<endl;}
+            cout<<"enter your number to delete  "<<endl;
+            cin>>c;
+            for(int i=0;i<n;i++){
+                if(c==a[i]){j=i;
+                    continue;}
+                l[j]=a[i];
+                j++;
+                }
+                for(int i=0;i<n-1;i++){
+                    cout<<"the new numbers is [ "<<l[i]<<" ]"<<endl;
+                    }
+                    cout<<"enter your new number to the array "<<endl;
+                    cin>>l[n-1];
+                    for(int i=0;i<n;i++){cout<<"your new array[ "<<l[i]<<" ]"<<endl;}
+            for(int i=0;i<n;i++){
+                if(k[i]==a[i]){
+                    continue;}
+                if(k[i]!=a[i]){
+                    d=1;
+                        break;
+                    }
+                }
+if(d==0){cout<<"symmetric"<<endl;}
+if(d==1){cout<<"asymmetric"<<endl;}  
+  return 0;
+}*/
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a[4][5] ,M[4],max=0,min=999999999,m[4],sum=0,s[4],h[5],p[5],k[5];
+    float A[4],l[5];
+for(int i=0;i<4;i++){
+    for(int j=0;j<5;j++){
+    cin>>a[i][j];
+    if(max<a[i][j])
+        {max=a[i][j];}
+        if(min>a[i][j])
+            {min=a[i][j];}
+            sum=sum+a[i][j];
+    }
+    M[i]=max;    
+    m[i]=min;
+    s[i]=sum;
+    A[i]=(float)sum/5;
+    sum=0;
+    max=0;
+    min=999999999;
+    }           
+    for(int i=0;i<4;i++){
+        cout<<"the sum of array["<<i<<"]"<<s[i]<<endl;
+        cout<<"the max of array["<<i<<"]"<<M[i]<<endl;
+        cout<<"the min of array["<<i<<"]"<<m[i]<<endl;
+        cout<<"the avg of array["<<i<<"]"<<A[i]<<endl;
+        }
+        sum=0;
+        for(int j=0;j<5;j++){
+    for(int i=0;i<4;i++){
+    if(max<a[i][j]){
+        max=a[i][j];
+        p[j]=max;
+        }
+        if(min>a[i][j]){min=a[i][j];
+        k[j]=min;
+        }
+        sum=sum+a[i][j];
+        }
+        max=0;
+        min=999999;
+        h[j]=sum;
+        l[j]=(float)sum/4.0;
+        sum=0;
+        }
+    for(int i=0;i<5;i++){
+        cout<<"the sum of cloum["<<i<<"]"<<h[i]<<endl;
+        cout<<"the max of cloum["<<i<<"]"<<p[i]<<endl;
+        cout<<"the min of cloum["<<i<<"]"<<k[i]<<endl;
+        cout<<"the avg of cloum["<<i<<"]"<<l[i]<<endl;
+        }
+return 0;
+}

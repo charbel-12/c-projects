@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int arr[5];
+    
+    int i;
+    cout<<"enter your 5 number \n and i will find the big number\n";
+   for( i=0;i<5;i++){
+   cout<<"enter your["<<i<<"]"<<endl;
+   cin>>arr[i];
+   }
+   int max=arr[0];
+   for( i=0;i<5;i++){
+       if(arr[i]>max){
+           max=arr[i];
+           }
+       
+       }
+   cout<<"your max namber is ["<<max<<"]!"<<endl;
+    return 0;
+    
+    
+    }

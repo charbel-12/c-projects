@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+void add (int n,int m, int a[100] [100]){
+    cout<<"enter your numbers to the array"<<endl;
+    for (int i=0;i<n;i++){
+        for (int j=0;j<m;j++){
+            cout<<"enter number ["<<i+1<<"] of ["<<j+1<<"] ";
+            cin>>a[i][j];
+            }
+        
+        }
+}
+void print (int n,int m,int a[100][100]){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cout<<a[i][j]<<"-";
+
+            
+            }
+        cout<<endl;
+        }
+    
+    }
+    void max (int n ,int m, int a[100][100]){
+        int line,max;
+        cout<<"enter the number of line you want to find the big number"<<endl;
+        cin>>line;
+        line=line-1;
+        max=a[line][0];
+        for (int i=0;i<m;i++){
+            if(max<a[line][i]){
+                max=a[line][i];
+                }
+            }
+            cout<<"the big number in line ["<<line<<"] is :"<<max<<endl;
+        }
+        void min (int n,int m,int a[100][100]){
+            int line ,min;
+            cout<<"enter the number of line you want to find the low number"<<endl;
+            cin>>line;
+            line=line-1;
+            min=a[line][0];
+            for(int i=0;i<m;i++){
+                if(min>a[line][i]){
+                    min=a[line][i];
+                    }
+                }
+               cout<<"the small number in line ["<<line<<"] is :"<<min<<endl; 
+            }
+    int suml (int n,int m,int a[100][100]){
+        int line,sum=0;
+        cout<<"enter the number of line"<<endl;
+        cin>>line;
+        for(int i=0;i<m;i++){
+            sum+=a[line][i];
+            }
+            return sum;
+        }
+float avg (int n,int m,int a[100][100]){
+    float avg;
+    cout<<"enter the number of coluam"<<endl;
+    int g,sum=0;
+    cin>>g;
+    for (int i=0;i<n;i++){
+        sum+=a[i][g];
+        }
+        avg=(float)sum/n;
+        return avg;
+    } 
+int main(){
+    int a[100][100],n,m,sum=0;
+    cout<<"enter how much you want to enter"<<endl;
+    cin>>n>>m;
+    add(n,m,a);
+    print(n,m,a);
+    max(n,m,a);
+    min(n,m,a);
+    cout<<"the sum for line is"<<suml(n,m,a)<<endl;
+    cout<<"the avg for colum is"<<avg(n,m,a)<<endl;
+    return 0;
+    }

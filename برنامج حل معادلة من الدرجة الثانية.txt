@@ -1,0 +1,27 @@
+#include <cstdlib>
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+int main(){
+    int a,b,c,d,m,x,x1,x2;
+    cout<<"enter your a b c to ax^2+bx+c "<<endl;
+    cin>>a>>b>>c;
+    d=b*b-4*a*c;
+    if (d>0){
+    m=sqrt(d);
+    x1=(-b-m)/2*a;
+    x2=(-b+m)/2*a;
+    cout<<"the resalt is x1=["<<x1<<"]"<<endl<<"the second reaslt is x2=["<<x2<<"]"<<endl;
+    }
+    else if(d==0){
+        x=-b/2*a;
+        cout<<"the reaslt is ["<<x<<"]"<<endl;
+        }
+        else  cout<<"impossiple"<<endl;
+        cout<<"the end"<<endl;
+    return 0;
+}

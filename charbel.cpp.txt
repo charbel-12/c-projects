@@ -1,0 +1,61 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+//all code will write here
+int main(){
+  char type;
+  int n;
+  int m;
+  int k;
+  int x;
+  cout<<"hi from first app \n";
+  cout<<"this project provide by charbel"<<endl;
+int age;
+for (x=0;x<=5;x++){cout<<"hello world \n";}
+cout<<"enter your birth year ";
+cin>>age;
+//this is a culcaleter for age
+age=2020-age;
+if (age>=18){
+  int x=0;
+  cout<<"enter a namber and I will decrease \n until =0";
+  cin>>x;
+  while(x>=0){cout<<"x="<<x<<endl;
+  x--;}
+   char type;
+   cout <<"you are welcome"<<endl;
+   cout <<"enter your gender f or m"<<endl;
+   cin>>type;
+   if (type=='f'){cout<<"Welcome mis"<<endl;}
+   if (type=='m') {cout<<"Welcome mr"<<endl;}
+int tall;
+cout<<"enter your tall and will increase that 10 cm"<<endl;
+  cin>>tall;
+  tall=tall+10;
+  cout<<"your new tall is:"<<tall<<endl;
+  cout<<"this is a calculator cun plural any tow number"<<endl;
+  cout<<"add your first number"<<endl;
+  cin>>n;
+  cout<<"add your second number"<<endl;
+  cin>>m;
+
+cout<<"wait 1 second"<<endl;
+  cout<<"your result is:"<<endl;
+  k=n+m;
+  cout<<k<<endl;
+  float l;
+  float G;
+  const float pi=3.14;
+  cout <<"this is a perfect pi culculeter you"<<endl<<"can plus any number with pi"<<endl;
+  cout <<"enter your number..";
+  cin>>l;
+  G=l+pi;
+cout<<G<<endl;
+}
+else if((age<=17)&&(age>=16)){cout<<"go to your study"<<endl;}
+else {cout<<"go to your middle school"<<endl;}
+  cout <<"\t  THE END"<<endl;
+  printf("program provide by charbel Mdawar" );
+  return 0;
+}
+  
